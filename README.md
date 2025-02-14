@@ -4,8 +4,8 @@
   <a href="www.linkedin.com/in/brandon-josué-vargas-moreira-77699824b">
     <img src="https://img.shields.io/static/v1?message=LinkedIn&logo=linkedin&label=&color=0077B5&logoColor=white&style=for-the-badge" height="25" alt="LinkedIn" />
   </a>
-  <a href="https://youtube.com/yourchannel">
-    <img src="https://logos-world.net/wp-content/uploads/2020/11/GitHub-Logo.png" />
+  <a href="[https://youtube.com/yourchannel](https://github.com/Vargas0421)">
+    <img src="https://logos-world.net/wp-content/uploads/2020/11/GitHub-Logo.png" height="25" alt="GitHub />
   </a>
   
 </div>

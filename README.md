@@ -1,13 +1,11 @@
-
 ### 🌍 Connect with me  
 <div align="center">
   <a href="www.linkedin.com/in/brandon-josué-vargas-moreira-77699824b">
     <img src="https://img.shields.io/static/v1?message=LinkedIn&logo=linkedin&label=&color=0077B5&logoColor=white&style=for-the-badge" height="25" alt="LinkedIn" />
   </a>
-  <a href="[https://youtube.com/yourchannel](https://github.com/Vargas0421)">
+  <a href="https://github.com/Vargas0421">
     <img src="https://logos-world.net/wp-content/uploads/2020/11/GitHub-Logo.png" height="25" alt="GitHub" />
   </a>
-  
 </div>
 
 ---
@@ -49,18 +47,27 @@ I have experience developing **client-server applications using Java (Swing, Net
   <img src="https://www.vectorlogo.zone/logos/microsoft_powerbi/microsoft_powerbi-icon.svg" height="40" alt="powerbi logo"  />
   <img width="12" />
   <img src="http://carletonsojourner.com/images/Pentaho_Logo.png" height="40" alt="pentaho logo"  />
-
 </div>
 
 ---
 
 ### 🗄 Database Experience  
 I have worked extensively with **SQL-based databases** such as **MySQL, PostgreSQL, and SQLite**, managing:  
-- **Relational database design** (e.g., Lubricentro Gotitas: sales, customers, vehicles).  
-- **Data serialization** (e.g., using JSON format with Gson in Java applications).  
-- **Efficient querying and optimization** for client-server applications.  
+- **Relational database design** with a focus on **normalization** (1NF, 2NF, 3NF) to optimize structure and reduce redundancy.  
+- **Efficient indexing and query optimization** to improve performance in large datasets.  
+- **Data serialization** using **JSON format** with Gson in Java applications.  
+- **ETL (Extract, Transform, Load) processes** for integrating and processing structured data.  
+- **Data visualization and analytics** using **Power BI** and **Pentaho**.  
 
-For backend services, I have experience integrating **databases with Java applications** to ensure **scalable, secure, and high-performance solutions**.
+---
+
+### 🏗 Backend Development  
+My backend development expertise includes:  
+- **Client-server architecture** with a **dedicated server** handling multiple **concurrent clients** via **multithreading**.  
+- **Data structures and algorithms** to optimize query performance and application responsiveness.  
+- **Socket programming** for efficient and secure communication between client and server applications.  
+- **RESTful API development** for integrating frontends with backend services.  
+- **Session management** to maintain user state and persistent data handling during interactions.  
 
 ---
 
@@ -68,3 +75,4 @@ For backend services, I have experience integrating **databases with Java applic
 <div align="center">
   <img src="https://streak-stats.demolab.com?user=maurodesouza&locale=en&mode=daily&theme=dark&hide_border=false&border_radius=5&order=3" height="220" alt="Streak Stats" />
 </div>
+

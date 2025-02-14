@@ -1,6 +1,6 @@
 ### 🌍 Connect with me  
 <div align="center">  
-  <a href="www.linkedin.com/in/brandon-josué-vargas-moreira-77699824b">  
+  <a href="www.linkedin.com/in/BrandonVM">  
     <img src="https://img.shields.io/static/v1?message=LinkedIn&logo=linkedin&label=&color=0077B5&logoColor=white&style=for-the-badge" height="25" alt="LinkedIn" />  
   </a>  
   <a href="https://github.com/Vargas0421">  

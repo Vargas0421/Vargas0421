@@ -14,7 +14,7 @@
 <h1 align="center">Welcome to my GitHub Profile!</h1>  
   
 ### 👨‍💻 About Me  
-- 🔝 I’m currently working on **client-server applications using Java**.  
+- 🔝 I’m currently working on learning new technologies and programming languages to gain strong expertise in the industry.
 - 📚 I’m currently learning **JavaScript and its frameworks** to expand my knowledge beyond Java.  
 - ⚡ My expertise includes **backend development, database management, and system architecture**.  
   

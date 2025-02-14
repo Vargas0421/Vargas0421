@@ -53,17 +53,19 @@ Additionally, I have developed **frontend applications using Bootstrap**, follow
   
 ---  
   
-### 🛄 Database Experience  
-I have worked extensively with **SQL-based databases** such as **MySQL, PostgreSQL, and SQLite**, managing:  
-- **Relational database design** with a focus on **normalization** (1NF, 2NF, 3NF) to optimize structure and reduce redundancy.  
-- **Efficient indexing and query optimization** to improve performance in large datasets.  
-- **Data serialization** using **JSON format** with Gson in Java applications.  
-- **ETL (Extract, Transform, Load) processes** for integrating and processing structured data.  
-- **Data visualization and analytics** using **Power BI** and **Pentaho**.  
+
+### 🏛 Frontend Development  
+I have experience in frontend development, using technologies such as:  
+- **HTML, CSS, and JavaScript** for building interactive and responsive web pages.  
+- **Bootstrap** for creating modern and mobile-friendly interfaces with reusable components.  
+- **React** to develop dynamic and high-performance applications.  
+- **Best practices in UI/UX design**, ensuring accessibility and intuitive navigation.  
+  
+I focus on delivering **clean, maintainable, and scalable code**, applying design patterns like **MVC** to separate concerns efficiently.  
   
 ---  
   
-### 🏗 Backend Development  
+### 🏡 Backend Development  
 My backend development expertise includes:  
 - **Client-server architecture** with a **dedicated server** handling multiple **concurrent clients** via **multithreading**.  
 - **Data structures and algorithms** to optimize query performance and application responsiveness.  
@@ -72,6 +74,17 @@ My backend development expertise includes:
 - **Session management** to maintain user state and persistent data handling during interactions.  
   
 ---  
+  
+### 🌆 Database Experience  
+I have worked extensively with **SQL-based databases** such as **MySQL, PostgreSQL, and SQLite**, managing:  
+- **Relational database design** with a focus on **normalization** (1NF, 2NF, 3NF) to optimize structure and reduce redundancy.  
+- **Efficient indexing and query optimization** to improve performance in large datasets.  
+- **Data serialization** using **JSON format** with Gson in Java applications.  
+- **ETL (Extract, Transform, Load) processes** for integrating and processing structured data.  
+- **Data visualization and analytics** using **Power BI** and **Pentaho**.  
+  
+---  
+
   
 ### 📊 GitHub Stats  
 <div align="center">  

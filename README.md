@@ -6,7 +6,7 @@
 
 ### 🌍 Connect with me  
 <div align="center">
-  <a href="https://linkedin.com/in/yourprofile">
+  <a href="www.linkedin.com/in/brandon-josué-vargas-moreira-77699824b">
     <img src="https://img.shields.io/static/v1?message=LinkedIn&logo=linkedin&label=&color=0077B5&logoColor=white&style=for-the-badge" height="25" alt="LinkedIn" />
   </a>
   <a href="https://youtube.com/yourchannel">

@@ -82,12 +82,4 @@ I have worked extensively with **SQL-based databases** such as **MySQL, PostgreS
 - **Data serialization** using **JSON format** with Gson in Java applications.  
 - **ETL (Extract, Transform, Load) processes** for integrating and processing structured data.  
 - **Data visualization and analytics** using **Power BI** and **Pentaho**.  
-  
----  
-
-  
-### 📊 GitHub Stats  
-<div align="center">  
-  <img src="https://streak-stats.demolab.com?user=maurodesouza&locale=en&mode=daily&theme=dark&hide_border=false&border_radius=5&order=3" height="220" alt="Streak Stats" />  
-</div>  
 

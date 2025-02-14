@@ -55,7 +55,7 @@ I have experience developing **client-server applications using Java (Swing, Net
   <img width="12" />
   <img src="https://www.vectorlogo.zone/logos/microsoft_powerbi/microsoft_powerbi-icon.svg" height="40" alt="powerbi logo"  />
   <img width="12" />
-  <img src="https://upload.wikimedia.org/wikipedia/commons/e/e8/Pentaho-logo.png" height="40" alt="pentaho logo"  />
+  <img src="http://carletonsojourner.com/images/Pentaho_Logo.png" height="40" alt="pentaho logo"  />
 
 </div>
 

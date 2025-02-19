@@ -6,10 +6,8 @@ document.getElementById("calcular").addEventListener("click", function() {
         return;
     }
 
-    // Cálculo de cargas sociales (10.5%)
     let cargasSociales = salarioBruto * 0.105;
 
-    // Cálculo del impuesto sobre la renta
     let impuestoRenta = 0;
 
     if (salarioBruto > 4745000) {
@@ -28,10 +26,8 @@ document.getElementById("calcular").addEventListener("click", function() {
         impuestoRenta += (salarioBruto - 922000) * 0.10;
     }
 
-    // Cálculo del salario neto
     let salarioNeto = parseFloat(document.getElementById("salario").value) - cargasSociales - impuestoRenta;
 
-    // Mostrar resultados
     document.getElementById("cargasSociales").textContent = `₡${cargasSociales.toFixed(2)}`;
     document.getElementById("impuestoRenta").textContent = `₡${impuestoRenta.toFixed(2)}`;
     document.getElementById("salarioNeto").textContent = `₡${salarioNeto.toFixed(2)}`;

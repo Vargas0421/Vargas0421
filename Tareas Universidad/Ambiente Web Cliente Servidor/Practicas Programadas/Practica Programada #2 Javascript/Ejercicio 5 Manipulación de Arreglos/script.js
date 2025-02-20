@@ -15,7 +15,7 @@ const listaDiv = document.getElementById("listaEstudiantes");
 let sumaNotas = 0;
 
 estudiantes.forEach(estudiante => {
-    let estudianteParrafo = document.createElement("p"); // Se corrige "student" por "p"
+    let estudianteParrafo = document.createElement("p"); 
     estudianteParrafo.textContent = `${estudiante.nombre} ${estudiante.apellido} - Nota: ${estudiante.nota}`;
     listaDiv.appendChild(estudianteParrafo);
     sumaNotas += estudiante.nota;
@@ -23,7 +23,7 @@ estudiantes.forEach(estudiante => {
 
 let promedio = sumaNotas / estudiantes.length;
 
-let promedioParrafo = document.createElement("p"); // También se corrige aquí
+let promedioParrafo = document.createElement("p"); 
 promedioParrafo.classList.add("promedio");
 promedioParrafo.textContent = `Promedio de notas: ${promedio.toFixed(2)}`;
 

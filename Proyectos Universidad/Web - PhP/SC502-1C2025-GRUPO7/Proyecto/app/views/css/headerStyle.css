@@ -1,0 +1,92 @@
+/* Estilo general para el header */
+header.fixed-top {
+  background-color: #343a40; /* Color oscuro */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra para el header */
+  z-index: 1030; /* Asegura que el header esté siempre encima */
+  height: 60px; /* Altura fija */
+  display: flex;
+  align-items: center; /* Centra el contenido verticalmente */
+  padding: 0 1rem;
+}
+
+/* Estilo para el botón de "Volver" */
+header .btn-outline-light {
+  color: #ffffff;
+  border-color: #ffffff;
+  transition: background-color 0.3s, color 0.3s;
+  height: 40px;
+  width: 120px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+header .btn-outline-light:hover {
+  background-color: #ffffff;
+  color: #343a40;
+}
+
+/* Tamaño fijo para los botones */
+header .btn-outline-light,
+header .btn-danger {
+  height: 40px;
+  width: 120px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Estilo para el título del navbar */
+header .navbar-brand strong {
+  color: #ffffff;
+  font-size: 1.25rem;
+  font-weight: bold;
+}
+
+/* Estilo para el dropdown del perfil */
+header .dropdown-toggle {
+  background-color: transparent;
+  border: none;
+  padding: 0;
+  height: 40px;
+  width: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+header .profile-icon {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+header .dropdown-menu {
+  background-color: #343a40;
+  border: none;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+header .dropdown-menu .dropdown-item {
+  color: #ffffff;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+header .dropdown-menu .dropdown-item:hover {
+  background-color: #495057;
+  color: #ffffff;
+}
+
+/* Estilo para el botón de cerrar sesión */
+header .btn-danger {
+  background-color: #dc3545;
+  border-color: #dc3545;
+  color: #ffffff;
+  transition: background-color 0.3s, border-color 0.3s;
+}
+
+header .btn-danger:hover {
+  background-color: #c82333;
+  border-color: #bd2130;
+}

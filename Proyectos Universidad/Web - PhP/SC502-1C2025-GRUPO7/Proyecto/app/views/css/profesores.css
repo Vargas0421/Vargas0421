@@ -1,0 +1,41 @@
+.card {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.2s ease, box-shadow 0.2s;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+}
+
+.card-body {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.image-style {
+  height: 200px;
+  object-fit: cover;
+}
+
+/* Centrar el botón Agregar Profesor */
+section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px; /* Espaciado superior opcional */
+}
+
+section button {
+  border: none;
+  background: none; /* Elimina estilos predeterminados del botón */
+}
+
+section .btn {
+  padding: 10px 20px;
+  font-size: 1rem;
+}

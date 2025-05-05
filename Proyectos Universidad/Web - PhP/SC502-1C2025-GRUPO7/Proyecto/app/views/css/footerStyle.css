@@ -1,0 +1,17 @@
+/* Estilo para el footer fijo */
+footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color: #343a40; /* Color oscuro */
+    color: #ffffff; /* Texto blanco */
+    text-align: center;
+    padding: 10px 0; /* Espaciado vertical */
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1); /* Sombra superior */
+    z-index: 1030; /* Asegura que esté encima de otros elementos */
+  }
+  
+  footer p {
+    margin: 0; /* Elimina márgenes para centrar el texto */
+    font-size: 0.9rem; /* Tamaño de fuente ajustado */
+  }

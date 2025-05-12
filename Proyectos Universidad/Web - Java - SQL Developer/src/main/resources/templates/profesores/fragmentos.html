@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity6"
+      xmlns:th="http://www.thymeleaf.org"> 
+    <head th:replace="~{layout/plantilla :: head}">       
+        <title>TechShop</title>
+        <meta charset="UTF-8"/>       
+    </head>
+    <body>
+        <!-- 1 Sección para crear el boton de agregar... llamará a una ventana modal-->
+        <section th:fragment="botonesAgregar" class="py-4 mb-4 bg-light">
+            <div class="container">
+                <div class="row justify-content-start">
+                    <div class="col-md-3">   
+                        <button type="button" class="btn btn-primary w-100" data-bs-toggle="modal"  
+                                data-bs-target="#agregarProfesores">
+                            <i class="fas fa-plus"></i> Agregar Profesores
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 2 Fragmento para agregar profesores, es la ventana modal -->
+        <section th:fragment="agregarProfesor">
+            <div id="agregarProfesores" 
+                 class="modal fade" 
+                 tabindex="-1" 
+                 aria-labelledby="exampleModalLabel" 
+                 aria-hidden="true">
+                <div class="modal-dialog modal-lg">
+                    <div class="modal-content">
+                        <div class="modal-header bg-info text-white">
+                            <h5 class="modal-title">Agregar Profesores</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div> 
+                        <form th:action="@{/profesores/guardar}" th:object="${profesores}"
+                              method="POST" class="was-validated" enctype="multipart/form-data">
+                            <div class="modal-body">
+                                <div class="col-md-6">
+                                    <label class="form-label" for="cedulaProfesor">Cedula del profesor</label>
+                                    <input class="form-control" type="text" name="cedulaProfesor" required="true"/>
+                                </div>
+                                <div class="col-md-6">
+                                    <label class="form-label" for="nombre">Nombre</label>
+                                    <input type="text" class="form-control" name="nombre" required="true"/>
+                                </div>
+                                <div class="col-md-6">
+                                    <label class="form-label" for="apellido">Apellido</label>
+                                    <input type="text" class="form-control" name="apellido" required="true"/>
+                                </div>
+                                <div class="col-md-6">
+                                    <label class="form-label" for="dirrecion">Codigo de Profesor</label>
+                                    <input type="text" class="form-control" name="codigoProfesor" required="true"/>
+                                </div>
+
+
+
+                            </div>
+                            <div class="modal-footer">
+                                <button class="btn btn-primary" type="submit">
+                                    <i class="fas fa-save me-1"></i> Guardar</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 3 Sección principal para mostrar la informaccion de la entidad profesores -->
+        <section th:fragment="listadoProfesores" id="profesores">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-9">
+                        <div class="card shadow-sm">
+                            <div class="card-header bg-primary text-white">
+                                <h4>Listado de profesores</h4>
+                            </div>
+                            <div th:if="${profesores != null and !profesores.empty}">
+                                <table class="table table-striped table-hover align-middle" style="table-layout: fixed; width: 100%;">
+                                    <thead class="table-dark">
+                                        <tr><th>#</th>
+                                            <th>Id</th>
+                                            <th>Codigo</th>
+                                            <th>Cedula</th>
+                                            <th>Nombre</th>
+                                            <th>Apellido</th>
+                                            <th>Acciones</th>
+
+
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr th:each="profesores, contador : ${profesores}">
+                                            <td>[[${contador.count}]]</td>
+                                            <td>[[${profesores.idProfesor}]]</td>
+                                            <td>[[${profesores.codigoProfesor}]]</td>
+                                            <td>[[${profesores.cedulaProfesor}]]</td>
+                                            <td>[[${profesores.nombre}]]</td>
+                                            <td>[[${profesores.apellido}]]</td>
+                                            
+
+                                            <td>
+                                                <div class="d-flex justify-content-center gap-1">
+                                                    <a th:href="@{/profesores/eliminar/}+${profesores.idProfesor}"
+                                                       class="btn btn-outline-danger btn-sm">
+                                                        <i class="fas fa-trash"></i> </a>
+                                                    <a th:href="@{/profesores/modificar/}+${profesores.idProfesor}"
+                                                       class="btn btn-outline-success btn-sm">
+                                                        <i class="fas fa-pencil-alt"></i></a>
+                                                </div>
+                                            </td></tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <div class="text-center p-2" th:if="${profesores == null or profesores.empty}">
+                                <span>La lista esta vacia</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="card text-center bg-primary text-white mb-3">
+                            <div class="card-body">
+                                <h3>Total de profesores</h3>
+                                <h4 class="fs-2"><i class="fas fa-users"></i> [[${totalProfesores}]]</h4>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 4 Fragmento que se utiliza en la página modifca.html -->
+        <section th:fragment="editarProfesor">
+            <div class="row justify-content-center">
+                <div class="col-md-10">
+                    <form method="POST"
+                          th:action="@{/profesores/actualizar}" 
+                          th:object="${profesor}"
+                          class="was-validated"                          
+                          enctype="multipart/form-data">
+                        <input type="hidden" name="idProfesor" th:field="*{idProfesor}"/>                       
+                        <section th:replace="~{profesores/fragmentos :: botonesEditar}"/>
+                        <div class="card mt-4">
+                            <div class="card-header bg-primary text-white">
+                                <h4>Actualizar Profesor</h4>
+                            </div>
+                            <div class="card-body">
+                                <div class="row g-3">
+                                    <div class="col-md-6">
+                                        <label for="cedulaProfesor">Cedula del profesor</label>
+                                        <input type="text" class="form-control" name="cedulaProfesor" th:field="*{cedulaProfesor}" required="true" />
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label for="nombre">Nombre</label>
+                                        <input type="text" class="form-control" name="nombre" th:field="*{nombre}" required="true"/>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label for="apellido">Apellido</label>
+                                        <input type="text" class="form-control" name="apellido" th:field="*{apellido}" required="true"/>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label for="codigoProfesor">Codigo Profesor</label>
+                                        <input type="text" class="form-control" name="codigoProfesor" th:field="*{codigoProfesor}" required="true"/>
+                                    </div>
+
+                                </div>
+                            </div>
+
+
+
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+        <!-- 5 Fragmento que se utiliza en el fragmento anterior -->
+        <section th:fragment="botonesEditar">
+            <div class="container py-4 mb-4 bg-light">
+                <div class="row">
+                    <div class="col-md-4">
+                        <a th:href="@{/profesores/listado}" class="btn btn-primary">
+                            <i class="fas fa-arrow-left"></i> Regresar
+                        </a>
+                    </div>
+                    <div class="col-md-4">                                
+                        <a th:href="@{/profesores/eliminar/}+${profesores.idProfesor}"
+                           class="btn btn-danger">
+                            <i class="fas fa-trash"></i> Eliminar
+                        </a>
+                    </div>
+                    <div class="col-md-4">
+                        <button type="submit" class="btn btn-success">
+                            <i class="fas fa-check"></i> Guardar
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </body>
+</html>

@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity6"
+      xmlns:th="http://www.thymeleaf.org"> 
+    <head th:replace="~{layout/plantilla :: head}">       
+        <title>TechShop</title>
+        <meta charset="UTF-8"/>       
+    </head>
+    <body>
+        <!-- 1 Sección para crear el boton de agregar... llamará a una ventana modal-->
+        <section th:fragment="botonesAgregar" class="py-4 mb-4 bg-light">
+            <div class="container">
+                <div class="row justify-content-start">
+                    <div class="col-md-4">   
+                        <button
+                            type="button" 
+                            class="btn btn-primary w-100" 
+                            data-bs-toggle="modal" 
+                            data-bs-target="#agregarMaterias">
+                            <i class="fas fa-plus me-2"></i> Agregar Materias
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 2 Fragmento para agregar materias, es la ventana modal -->
+        <section th:fragment="agregarMateria">
+            <div id="agregarMaterias" 
+                 class="modal fade" 
+                 tabindex="-1" 
+                 aria-labelledby="exampleModalLabel" 
+                 aria-hidden="true">
+                <div class="modal-dialog modal-lg">
+                    <div class="modal-content">
+                        <div class="modal-header bg-info text-white">
+                            <h5 class="modal-title">Agregar Materias</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div> 
+                        <form th:action="@{/materias/guardar}" th:object="${materias}"
+                              method="POST" class="was-validated" enctype="multipart/form-data">
+                            <div class="modal-body">
+                                <div class="row g-3">
+                                    <div class="col-md-6">
+                                        <label for="cedulaMaterias">Codigo de la materia</label>
+                                        <input class="form-control" type="text" name="codigoMateria" required="true"/>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label for="nombre">Nombre de la materia</label>
+                                        <input type="text" class="form-control" name="nombreMateria" required="true"/>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label for="apellido">Descripcion</label>
+                                        <input type="text" class="form-control" name="descripcion" required="true"/>
+                                    </div>
+
+
+
+                                </div>
+                            </div>
+                            <div class="modal-footer">
+                                <button class="btn btn-success" 
+                                        type="submit">
+                                    <i class="fas fa-save me-1"></i> Guardar
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 3 Sección principal para mostrar la informaccion de la entidad materias -->
+        <section th:fragment="listadoMaterias" id="materias">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-9">
+                        <div class="card shadow-sm">
+                            <div class="card-header bg-primary text-white">
+                                <h4>Listado de materias</h4>
+                            </div>
+                            <div th:if="${materias != null and !materias.empty}">
+                                <table class="table table-striped table-hover align-middle" style="table-layout: fixed; width: 100%;">
+                                    <thead class="table-dark">
+                                        <tr><th>#</th>
+                                            <th>Id Materias</th>
+                                            <th>Codigo de Materias</th>
+                                            <th>Nombre</th>
+                                            <th>Descripcion</th>
+                                            <th>Acciones</th>
+
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr th:each="materias, contador : ${materias}">
+                                            <td>[[${contador.count}]]</td>
+                                            <td>[[${materias.idMateria}]]</td>
+                                            <td>[[${materias.codigoMateria}]]</td>
+                                            <td>[[${materias.nombreMateria}]]</td>
+                                            <td>[[${materias.descripcion}]]</td>
+
+                                            <td>
+                                                <div class="d-flex justify-content-center gap-1">
+                                                    <a th:href="@{/materias/eliminar/}+${materias.idMateria}"
+                                                       class="btn btn-outline-danger btn-sm">
+                                                        <i class="fas fa-trash"></i>
+                                                    </a>
+                                                    <a th:href="@{/materias/modificar/}+${materias.idMateria}"
+                                                       class="btn btn-outline-success btn-sm">
+                                                        <i class="fas fa-pencil"></i>
+                                                    </a>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <div class="text-center p-2" th:if="${materias == null or materias.empty}">
+                                <span>La lista esta vacia</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="card text-center bg-primary text-white mb-3">
+                            <div class="card-body">
+                                <h3>Total de materias</h3>
+                                <h4 class="fs-2"><i class="fas fa-users"></i> [[${totalMaterias}]]</h4>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 4 Fragmento que se utiliza en la página modifca.html -->
+        <section th:fragment="editarMaterias">
+            <div class="row justify-content-center">
+
+                <div class="col-md-10">
+                    <form method="POST"
+                          th:action="@{/materias/actualizar}" 
+                          th:object="${materia}"
+                          class="was-validated"                          
+                          enctype="multipart/form-data">
+                        <input type="hidden" name="idMateria" th:field="*{idMateria}"/>                       
+                        <section th:replace="~{materias/fragmentos :: botonesEditar}"/>
+                        <div class="card mt-4">
+                            <div class="card-header">
+                                <h5 class="mb-0">Actualizar</h5>
+                            </div>
+
+                            <div class="card-body">
+                                <div class="row g-3">
+                                    <div class="col-md-6">
+                                        <label for="cedulaMaterias">Codigo de la materia</label>
+                                        <input type="text" class="form-control" name="codigoMateria" th:field="*{codigoMateria}" required="true"/>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label for="nombre">Nombre de la materia</label>
+                                        <input type="text" class="form-control" name="nombreMateria"th:field="*{nombreMateria}" required="true"/>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label for="apellido">Descripcion</label>
+                                        <input type="text" class="form-control" name="descripcion"th:field="*{descripcion}" required="true"/>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+        <!-- 5 Fragmento que se utiliza en el fragmento anterior -->
+        <section th:fragment="botonesEditar">
+            <div class="container py-4 mb-3">
+                <div class="row g-2">
+                    <div class="col-md-4 ">
+                        <a th:href="@{/materias/listado}" class="btn btn-secondary w-100">
+                            <i class="fas fa-arrow-left"></i> Regresar
+                        </a>
+                    </div>
+                    <div class="col-md-4 d-grid">                                
+                        <a th:href="@{/materias/eliminar/}+${materias.idMateria}"
+                           class="btn btn-danger w-100">
+                            <i class="fas fa-trash"></i> Eliminar
+                        </a>
+                    </div>
+                    <div class="col-md-4 d-grid">
+                        <button type="submit" class="btn btn-success w-100">
+                            <i class="fas fa-check"></i> Guardar
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </body>
+</html>

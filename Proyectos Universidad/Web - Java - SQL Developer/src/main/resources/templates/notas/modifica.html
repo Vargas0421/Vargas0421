@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity6"
+      xmlns:th="http://www.thymeleaf.org"> 
+    <head th:replace="~{layout/plantilla :: head}">       
+        <title>TechShop</title>
+        <meta charset="UTF-8"/>
+
+    </head>
+    <style th:replace="~{layout/plantilla :: styles}" >
+
+    </style>
+    <body>
+        <section th:fragment="section">
+            <div class="wrapper">
+                <aside id="sidebar">
+                    <div class="sidebar-logo">
+                        <a th:href="@{/}">Sistema Académico</a>
+                    </div>
+                    <ul class="sidebar-nav">
+                        <li class="sidebar-item">
+                            <a th:href="@{/estudiante/listado}" class="sidebar-link">
+
+                                <span>Estudiantes</span>
+                            </a>
+                        </li>
+                        <li class="sidebar-item">
+                            <a th:href="@{/profesores/listado}" class="sidebar-link">
+
+                                <span>Profesores</span>
+                            </a>
+                        </li>
+                        <li class="sidebar-item">
+                            <a th:href="@{/materias/listado}" class="sidebar-link">
+
+                                <span>Materias</span>
+                            </a>
+                        </li>
+                        <li class="sidebar-item">
+                            <a th:href="@{/horarios/listado}" class="sidebar-link">
+
+                                <span>Horarios</span>
+                            </a>
+                        </li>
+                        <li class="sidebar-item">
+                            <a th:href="@{/clases/listado}" class="sidebar-link">
+
+                                <span>Clases</span>
+                            </a>
+                        </li>
+                        <li class="sidebar-item">
+                            <a th:href="@{/aulas/listado}" class="sidebar-link">
+
+                                <span>Aulas</span>
+                            </a>
+                        </li>
+                        <li class="sidebar-item">
+                            <a th:href="@{/congelamiento/listado}" class="sidebar-link">
+
+                                <span>Congelamiento</span>
+                            </a>
+                        </li>
+                        <li class="sidebar-item">
+                            <a th:href="@{/inscripciones/listado}" class="sidebar-link">
+
+                                <span>Inscripciones</span>
+                            </a>
+                        </li>
+                        <li class="sidebar-item">
+                            <a class="sidebar-link has-dropdown collapsed" 
+                               data-bs-toggle="collapse" 
+                               href="#usuarioRol" 
+                               role="button" 
+                               aria-expanded="false" 
+                               aria-controls="usuarioRol">
+
+                                <span>Usuarios y Roles</span>
+                            </a>
+                            <ul class="collapse list-unstyled sidebar-dropdown" id="usuarioRol">
+                                <li class="sidebar-item">
+                                    <a th:href="@{/usuario/listado}" class="sidebar-link">Usuario</a>
+                                </li>
+                                <li class="sidebar-item">
+                                    <a th:href="@{/rol/listado}" class="sidebar-link">Rol</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="sidebar-item">
+                            <a th:href="@{/archivos/listado}" class="sidebar-link">
+
+                                <span>Archivos</span>
+                            </a>
+                        </li>
+                        <li class="sidebar-item">
+                            <a th:href="@{/notas/listado}" class="sidebar-link">
+
+                                <span>Notas</span>
+                            </a>
+                        </li>
+                    </ul>
+                    <div class="sidebar-footer">
+                        <form method="post" 
+                              th:action="@{/logout}">
+                            <button class="sidebar-link logout-btn">
+                                <i class="lni lni-exit"></i>
+                                <span>Logout</span>
+                            </button>
+                        </form>
+                    </div>
+                </aside>
+                <div class="main">
+                    <div>
+                        <section th:replace="~{notas/fragmentos :: editarNota}"/> </div>
+                </div>
+            </div>
+
+            <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+        </section>
+        
+
+    </body>
+</html>

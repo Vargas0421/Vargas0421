@@ -54,32 +54,35 @@ Additionally, I have developed **frontend applications using Bootstrap**, follow
 ---  
   
 
-### 🏛 Frontend Development  
-I have experience in frontend development, using technologies such as:  
-- **HTML, CSS, and JavaScript** for building interactive and responsive web pages.  
-- **Bootstrap** for creating modern and mobile-friendly interfaces with reusable components.  
-- **React** to develop dynamic and high-performance applications.  
-- **Best practices in UI/UX design**, ensuring accessibility and intuitive navigation.  
-  
-I focus on delivering **clean, maintainable, and scalable code**, applying design patterns like **MVC** to separate concerns efficiently.  
-  
+### 🏛 Frontend Development
+I have experience in frontend development using modern web technologies, including:
+- **HTML, CSS, and JavaScript** for building interactive, responsive, and accessible web interfaces.  
+- **Bootstrap** for developing mobile-friendly layouts with reusable and consistent UI components.  
+- **React** for building dynamic, high-performance single-page applications.  
+- **UI/UX best practices**, ensuring intuitive navigation, accessibility, and a smooth user experience.  
+I prioritize writing **clean, maintainable, and scalable code**, and apply design patterns such as **MVC** to maintain a clear separation of concerns throughout the development process.
+
 ---  
   
-### 🏡 Backend Development  
-My backend development expertise includes:  
-- **Client-server architecture** with a **dedicated server** handling multiple **concurrent clients** via **multithreading**.  
-- **Data structures and algorithms** to optimize query performance and application responsiveness.  
-- **Socket programming** for efficient and secure communication between client and server applications.  
-- **RESTful API development** for integrating frontends with backend services.  
-- **Session management** to maintain user state and persistent data handling during interactions.  
-  
+### 🏡 Backend Development
+My backend development expertise includes:
+- **Client-server architecture**, especially in **Java**, with a **dedicated server** handling multiple **concurrent clients** through **multithreading**.  
+- **Socket programming** for secure and efficient communication between clients and servers.  
+- **Backend and frontend integration in PHP**, including building dynamic web applications with shared logic.  
+- **AJAX-based API consumption in PHP**, enabling seamless and responsive communication between the client and backend.  
+- **RESTful API development** to connect frontend interfaces with backend services effectively.  
+- **Session management** for maintaining user state and handling persistent data across interactions.  
+- Strong foundation in **data structures and algorithms** to ensure optimal performance and responsiveness in backend systems.
+
 ---  
   
-### 🌆 Database Experience  
-I have worked extensively with **SQL-based databases** such as **MySQL, PostgreSQL, and SQLite**, managing:  
-- **Relational database design** with a focus on **normalization** (1NF, 2NF, 3NF) to optimize structure and reduce redundancy.  
-- **Efficient indexing and query optimization** to improve performance in large datasets.  
-- **Data serialization** using **JSON format** with Gson in Java applications.  
-- **ETL (Extract, Transform, Load) processes** for integrating and processing structured data.  
-- **Data visualization and analytics** using **Power BI** and **Pentaho**.  
+### 🌆 Database Experience
+I have extensive hands-on experience with **SQL-based databases**, including **MySQL**, **PostgreSQL**, **SQL Server**, and **Oracle SQL Developer**, focusing on:
+- **Relational database design** with strong emphasis on **normalization** (1NF, 2NF, 3NF) to ensure data integrity and reduce redundancy.  
+- **Query optimization and indexing strategies** to enhance performance with large-scale datasets.  
+- **Stored procedures, triggers, and cursors** for automating and controlling complex database operations.  
+- **ETL (Extract, Transform, Load) processes**, particularly for structured data integration and transformation.  
+- **Data serialization** using **JSON format** (e.g., with **Gson** in Java applications).  
+- **Business intelligence and reporting** through tools like **Power BI** and **Pentaho**, including the creation of interactive dashboards and data-driven reports.
+
 

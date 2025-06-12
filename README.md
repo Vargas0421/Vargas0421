@@ -28,6 +28,9 @@ Additionally, I have developed **frontend applications using Bootstrap**, follow
 <div align="center">  
   <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original-wordmark.svg" height="40" alt="java logo"  />  
   <img width="12" />  
+    <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fstatic.gunnarpeipman.com%2Fwp-content%2Fuploads%2F2020%2F09%2Faspnet-featured.png&f=1&nofb=1&ipt=935013e7a1fe21d5509565ffbb62fd0444d0597af3822a5989f6e8a72b4196b0height="40" alt="javascript logo"  />  
+  <img width="12" />  
+
   <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" height="40" alt="javascript logo"  />  
   <img width="12" />  
   <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original-wordmark.svg" height="40" alt="python logo"  />  
